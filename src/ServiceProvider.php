@@ -36,7 +36,7 @@ class ServiceProvider extends Base
     {
         $config = config('tinkoff-business');
 
-        if (is_null($config)) {
+        if (is_null($config) || (is_array($config) && is_null($config['token']))) {
             throw InvalidConfiguration::configurationNotSet();
         }
 
