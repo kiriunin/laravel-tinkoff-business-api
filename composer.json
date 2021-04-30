@@ -1,0 +1,33 @@
+{
+    "name": "kiriunin/laravel-tinkoff-business-api",
+    "description": "Laravel client for Tinkoff Business API",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "kiriunin",
+            "email": "e@kiriunin.ru"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">=8.0",
+        "illuminate/support": ">=8.0",
+        "kiriunin/tinkoff-business-api": "^0.1.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Kiriunin\\LaravelTinkoffBusinessApi\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Kiriunin\\LaravelTinkoffBusinessApi\\ServiceProvider"
+            ],
+            "aliases": {
+                "TinkoffBusiness": "Kiriunin\\LaravelTinkoffBusinessApi\\Facades\\TinkoffBusiness"
+            }
+        }
+    }
+}
