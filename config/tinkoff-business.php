@@ -7,7 +7,8 @@ return [
     |--------------------------------------------------------------------------
     */
 
-    'token' => env('TINKOFF_BUSINESS_TOKEN', ),
+    'token' => env('TINKOFF_BUSINESS_TOKEN'),
     'sandboxToken' => env('TINKOFF_BUSINESS_SANDBOX_TOKEN', 'TinkoffOpenApiSandboxSecretToken'),
-    'isSandbox' => env('TINKOFF_BUSINESS_IS_SANDBOX', false)
+    'isSandbox' => env('TINKOFF_BUSINESS_IS_SANDBOX', false),
+    'guzzleOptions' => []
 ];

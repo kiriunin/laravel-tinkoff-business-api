@@ -41,8 +41,8 @@ class ServiceProvider extends Base
         }
 
         return $config['isSandbox']
-            ? Tinkoff::create($config['sandboxToken'], $app->get('log'), true)
-            : Tinkoff::create($config['token'], $app->get('log'));
+            ? Tinkoff::create($config['sandboxToken'], true, $config['guzzleOptions'], $app->get('log'))
+            : Tinkoff::create($config['token'], false, $config['guzzleOptions'], $app->get('log'));
 
     }
 }
